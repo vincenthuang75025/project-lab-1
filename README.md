@@ -5,3 +5,5 @@ TODO
 -make more efficient
 
 -make plot patterns generalizable to distinct starting sets
+
+-maybe live simulation-type stuff?
