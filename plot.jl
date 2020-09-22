@@ -37,9 +37,10 @@ function draw_pattern(starting_points, N)
 
     plot()
     for turn = 1 : N+1
-        plot!(xs[turn], ys[turn], seriestype = :scatter, msize = 3, color = RGB(turn / (N+1), 0, turn / (N+1))) # purple gradient
+        plot!(xs[turn], ys[turn], seriestype = :scatter, legend = :none, msize = 3, color = RGB(turn / (N+1), 0, turn / (N+1))) # purple gradient
     end
     gui()
 end
 
-draw_pattern([(0,0)], 51)
+draw_pattern([(0,0)], 20)
+png("iters-20")
