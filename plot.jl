@@ -1,11 +1,16 @@
 using Plots
-N = 31 # number of iterations
+
+draw_pattern([(0,0)], 5)
+png("iters-5")
 
 function get_neighbors(pt) # get lattice neighbors of pt = (x,y)
     return [(pt[1]-1, pt[2]), (pt[1]+1, pt[2]), (pt[1], pt[2]-1), (pt[1], pt[2]+1)]
 end
 
 function draw_pattern(starting_points, N)
+    """
+    given a list of initial points (x,y), simulates the grid process for N steps and plots the result
+    """
     points = Set()
     xs = [[] for i=0:N]
     ys = [[] for i=0:N]
@@ -41,6 +46,3 @@ function draw_pattern(starting_points, N)
     end
     gui()
 end
-
-draw_pattern([(0,0)], 20)
-png("iters-20")
